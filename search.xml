@@ -20,38 +20,9 @@
       
         <tags>
             
-            <tag> 拙作 </tag>
-            
             <tag> 推理 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2024/07/02/xxx/"/>
-      <url>/2024/07/02/xxx/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1st"><a href="#1st" class="headerlink" title="1st"></a>1st</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 論文複現のSonata </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 深度学习 </tag>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 论文 </tag>
+            <tag> 拙作 </tag>
             
         </tags>
       
@@ -114,6 +85,35 @@
     
     
     <entry>
+      <title>Fuse feeds as one:cross-modal framework for general identification of AMPs</title>
+      <link href="/2024/07/01/xxx/"/>
+      <url>/2024/07/01/xxx/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Fuse-feeds-as-one-cross-modal-framework-for-general-identification-of-AMPs"><a href="#Fuse-feeds-as-one-cross-modal-framework-for-general-identification-of-AMPs" class="headerlink" title="Fuse feeds as one: cross-modal framework for general identification of AMPs"></a>Fuse feeds as one: cross-modal framework for general identification of AMPs</h1><p><a href="https://doi.org/10.1093/bib/bbad336">https://doi.org/10.1093/bib/bbad336</a> (SOTA)</p><p>先开个坑</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 論文複現のConcerto </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>青楼魅影</title>
       <link href="/2024/06/14/hello-world/"/>
       <url>/2024/06/14/hello-world/</url>
@@ -130,9 +130,9 @@
       
         <tags>
             
-            <tag> 拙作 </tag>
-            
             <tag> 推理 </tag>
+            
+            <tag> 拙作 </tag>
             
         </tags>
       
