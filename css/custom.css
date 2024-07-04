@@ -1,56 +1,4 @@
-/* 样式文件 */
-.category-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    max-height: 400px; /* 设置容器最大高度 */
-    overflow-y: auto; /* 添加垂直滚动条 */
-  }
   
-  .category-card-item {
-    background: var(--trans-light);
-    backdrop-filter: var(--backdrop-filter);
-    border-radius: 25px;
-    border: var(--border-style);
-    width: 10px; /* 根据需要调整宽度 */
-    height: 5px; /* 设置卡片高度 */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    text-decoration: none;
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .category-card-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .category-card-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .category-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 确保图片等比例缩放 */
-  }
-  
-  .category-info {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9em;
-  }
-  
-
 /* 页脚与头图透明 */
 #footer {
     background: transparent !important;
@@ -344,23 +292,12 @@
 }
 
 /* 首页文章卡片 */
-#recent-posts>.recent-post-item {
+#recent-posts > .recent-post-item {
     background: var(--trans-light);
     backdrop-filter: var(--backdrop-filter);
     border-radius: 25px;
     border: var(--border-style);
-    width: 300px; /* 调小宽度 */
-/}
-#recent-posts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
   }
-  
-  
-  
-
 
 /* 首页侧栏卡片 */
 #aside-content .card-widget {
@@ -545,7 +482,7 @@ img {
 }
 
 body {
-    background: url('/img/tokyo_yoru.jpg') no-repeat center center fixed;
+    background: url('/img/tokyo_tower_4k.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
