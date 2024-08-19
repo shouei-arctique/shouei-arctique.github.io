@@ -176,9 +176,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -207,9 +207,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -238,40 +238,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
             
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-迭代</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
             <tag> 线性代数 </tag>
-            
-            <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -300,9 +269,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -315,11 +284,11 @@
     
     
     <entry>
-      <title>数值分析-牛顿法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
+      <title>数值分析-迭代</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
       
       
       <categories>
@@ -331,9 +300,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -362,9 +331,40 @@
       
         <tags>
             
+            <tag> 机器学习 </tag>
+            
             <tag> 线性代数 </tag>
             
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-牛顿法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -495,9 +495,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -754,9 +754,9 @@
       
         <tags>
             
-            <tag> 生物信息学 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 生物信息学 </tag>
             
         </tags>
       
