@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Jordon标准型求法</title>
+      <link href="/2024/08/19/Jordan1/"/>
+      <url>/2024/08/19/Jordan1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="求下矩阵的-jordan-标准形和相应的相似变换矩阵">求下矩阵的 Jordan标准形和相应的相似变换矩阵</h2><p>给定矩阵 ( A ) 如下：</p>[ A =<span class="math display">\[\begin{pmatrix}-1 &amp; -2 &amp; 6 \\-1 &amp; 0 &amp; 3 \\-1 &amp; -1 &amp; 4\end{pmatrix}\]</span><p>]</p><p><strong>解：</strong> 因为</p>[ I - A =<span class="math display">\[\begin{pmatrix}\lambda + 1 &amp; 2 &amp; -6 \\1 &amp; \lambda &amp; -3 \\1 &amp; 1 &amp; \lambda - 4\end{pmatrix}\]</span><span class="math display">\[\begin{pmatrix}1 &amp; 0&amp; 0 \\0&amp; \lambda - 1&amp; 0 \\0&amp; 0&amp; (\lambda - 1)^2\end{pmatrix}\]</span><p>]</p><p>行列变换成对角形式</p><p>故</p>[ A J =<span class="math display">\[\begin{pmatrix}1 &amp;0 &amp;0 \\0 &amp; 1 &amp;1 \\0 &amp; 0 &amp; 1\end{pmatrix}\]</span><p>] 两个初等因子<span class="math inline">\(\lambda - 1\)</span>和<span class="math inline">\((\lambda - 1)^2\)</span>其中<span class="math inline">\((\lambda -1)^2\)</span>是重根，所以相应对角线上还有个1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>背景知识-TPO38L4(气态行星)</title>
       <link href="/2024/08/18/tofel/3/"/>
       <url>/2024/08/18/tofel/3/</url>
@@ -54,31 +79,6 @@
     
     
     <entry>
-      <title>背景知识-太阳系</title>
-      <link href="/2024/08/15/tofel/2/"/>
-      <url>/2024/08/15/tofel/2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="内容">内容</h2><p>太阳系在约45亿年前形成。星际间的气体和尘埃碰撞形成了太阳系星云(solarnebula)————内中的材料撞击形成了太阳系。</p><p>太阳系位于银河系中的猎户座星团(Orion starcluster)。银河系里只有15%的恒星拥有行星系统。</p><p>八个行星可以分为两类：类地(Terrestrial)和类木(Jovian)</p><p>类地：包括水星，金星，地球和火星 - 由岩石类组成 - 表面是固体 -没有环状带 - 很少或没有卫星 - 相对较小最小、离太阳最近的是水星。金星是最热的。火星可能在37亿年前支持生命活动，当时他表面多水、大气潮湿</p><p>类木：分为气体巨星(木星和土星)和冰巨星(天王星和海王星)</p><p>四个类木行星都有很多个卫星，有环状带，没有固体表面。最大的类木行星式木星。土星是第二大，其环状带宽至地月距，厚度却只有一公里。冥王星侧边旋转。海王星最冷。</p><p>围绕在类地行星的是小行星带，充满太阳系形成的剩余物体，从尘埃到最大的物体(矮星谷神星)</p><p>围绕在类木行星的是柯伊伯带(Kuiper Belt)，是很多彗星的诞生地。</p><p>柯伊伯带外面是奥尔特云(Oortcloud),冰碎片组成的巨大球体。是太阳系的边界——太阳的重力和物理影响消失</p><h2 id="单词">单词</h2><p>Mercury Venus Mars Jupiter Saturn Uranus Neptune the Milky Waygalaxy银河系 Orion star cluster猎户座星团 Terrestrial planets类地行星Jovian planets类木行星 Pluto冥王星 kuiper belt柯伊伯带 remnant残余</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 托福 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>力扣-55</title>
       <link href="/2024/08/15/lc/leetcode_55/"/>
       <url>/2024/08/15/lc/leetcode_55/</url>
@@ -102,6 +102,31 @@
             <tag> Leetcode </tag>
             
             <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>背景知识-太阳系</title>
+      <link href="/2024/08/15/tofel/2/"/>
+      <url>/2024/08/15/tofel/2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="内容">内容</h2><p>太阳系在约45亿年前形成。星际间的气体和尘埃碰撞形成了太阳系星云(solarnebula)————内中的材料撞击形成了太阳系。</p><p>太阳系位于银河系中的猎户座星团(Orion starcluster)。银河系里只有15%的恒星拥有行星系统。</p><p>八个行星可以分为两类：类地(Terrestrial)和类木(Jovian)</p><p>类地：包括水星，金星，地球和火星 - 由岩石类组成 - 表面是固体 -没有环状带 - 很少或没有卫星 - 相对较小最小、离太阳最近的是水星。金星是最热的。火星可能在37亿年前支持生命活动，当时他表面多水、大气潮湿</p><p>类木：分为气体巨星(木星和土星)和冰巨星(天王星和海王星)</p><p>四个类木行星都有很多个卫星，有环状带，没有固体表面。最大的类木行星式木星。土星是第二大，其环状带宽至地月距，厚度却只有一公里。冥王星侧边旋转。海王星最冷。</p><p>围绕在类地行星的是小行星带，充满太阳系形成的剩余物体，从尘埃到最大的物体(矮星谷神星)</p><p>围绕在类木行星的是柯伊伯带(Kuiper Belt)，是很多彗星的诞生地。</p><p>柯伊伯带外面是奥尔特云(Oortcloud),冰碎片组成的巨大球体。是太阳系的边界——太阳的重力和物理影响消失</p><h2 id="单词">单词</h2><p>Mercury Venus Mars Jupiter Saturn Uranus Neptune the Milky Waygalaxy银河系 Orion star cluster猎户座星团 Terrestrial planets类地行星Jovian planets类木行星 Pluto冥王星 kuiper belt柯伊伯带 remnant残余</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 托福 </tag>
             
         </tags>
       
@@ -151,42 +176,11 @@
       
         <tags>
             
-            <tag> 机器学习 </tag>
-            
-            <tag> 数值分析 </tag>
-            
             <tag> 线性代数 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-追赶法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>对于爪形矩阵的LU分解</p><p><span class="math display">\[\begin{pmatrix}b_1 &amp; c_1 &amp; 0 &amp; \cdots &amp; 0 \\a_2 &amp; b_2 &amp; c_2 &amp; \cdots &amp; 0 \\0 &amp; a_3 &amp; b_3 &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; c_{n-1} \\0 &amp; 0 &amp; 0 &amp; a_n &amp; b_n \\\end{pmatrix}\begin{pmatrix}x_1 \\x_2 \\x_3 \\\vdots \\x_n \\\end{pmatrix}=\begin{pmatrix}d_1 \\d_2 \\d_3 \\\vdots \\d_n \\\end{pmatrix}\]</span></p><p><span class="math display">\[\textbf{前向消去:}\alpha_1 = \frac{c_1}{b_1}, \quad \beta_1 = \frac{d_1}{b_1}\]</span> <span class="math display">\[\alpha_i = \frac{c_i}{b_i - a_i \alpha_{i-1}}, \quad \beta_i = \frac{d_i- a_i \beta_{i-1}}{b_i - a_i \alpha_{i-1}}, \quad (i = 2, 3, \dots, n)\]</span> <span class="math display">\[\textbf{回代:}x_n = \beta_n, \quad x_i = \beta_i - \alpha_i x_{i+1}, \quad (i = n-1,n-2, \dots, 1)\]</span> 求解顺序为：<span class="math display">\[\alpha_{1}-&gt;\beta_{1}-&gt;\alpha_{2}-&gt;\beta_{2}-&gt;\alpha_{3}……\]</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
             
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
-            
-            <tag> 线性代数 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -213,11 +207,42 @@
       
         <tags>
             
+            <tag> 线性代数 </tag>
+            
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
             
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-追赶法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>对于爪形矩阵的LU分解</p><p><span class="math display">\[\begin{pmatrix}b_1 &amp; c_1 &amp; 0 &amp; \cdots &amp; 0 \\a_2 &amp; b_2 &amp; c_2 &amp; \cdots &amp; 0 \\0 &amp; a_3 &amp; b_3 &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; c_{n-1} \\0 &amp; 0 &amp; 0 &amp; a_n &amp; b_n \\\end{pmatrix}\begin{pmatrix}x_1 \\x_2 \\x_3 \\\vdots \\x_n \\\end{pmatrix}=\begin{pmatrix}d_1 \\d_2 \\d_3 \\\vdots \\d_n \\\end{pmatrix}\]</span></p><p><span class="math display">\[\textbf{前向消去:}\alpha_1 = \frac{c_1}{b_1}, \quad \beta_1 = \frac{d_1}{b_1}\]</span> <span class="math display">\[\alpha_i = \frac{c_i}{b_i - a_i \alpha_{i-1}}, \quad \beta_i = \frac{d_i- a_i \beta_{i-1}}{b_i - a_i \alpha_{i-1}}, \quad (i = 2, 3, \dots, n)\]</span> <span class="math display">\[\textbf{回代:}x_n = \beta_n, \quad x_i = \beta_i - \alpha_i x_{i+1}, \quad (i = n-1,n-2, \dots, 1)\]</span> 求解顺序为：<span class="math display">\[\alpha_{1}-&gt;\beta_{1}-&gt;\alpha_{2}-&gt;\beta_{2}-&gt;\alpha_{3}……\]</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 线性代数 </tag>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 数值分析 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -244,11 +269,11 @@
       
         <tags>
             
+            <tag> 线性代数 </tag>
+            
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
-            
-            <tag> 线性代数 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -275,42 +300,11 @@
       
         <tags>
             
-            <tag> 机器学习 </tag>
-            
-            <tag> 数值分析 </tag>
-            
             <tag> 线性代数 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-最小二乘法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="最小二乘拟合多项式">最小二乘拟合多项式</h1><p><span class="math display">\[\varphi_{0}=1,\varphi_{1}=x,\varphi_{2}=x^2,……\varphi_{n}=x^n\]</span> ## 例题 <span class="math display">\[x \quad -3\quad-2\quad-1\quad0\quad1\quad2\quad3\quad4\]</span> <span class="math display">\[f(x)\quad-3.2\quad-2.1\quad-1.2\quad0.1\quad0.9\quad2.1\quad3.3\quad4\]</span> 试用y=ax+b拟合</p><h2 id="题解">题解</h2><p><span class="math display">\[\begin{bmatrix}(\varphi_{0},\varphi_{0}) &amp; (\varphi_{0},\varphi_{1}) \\(\varphi_{1},\varphi_{0}) &amp; (\varphi_{1},\varphi_{1})\end{bmatrix}\begin{pmatrix}    a_{0}\\    a_{1}\end{pmatrix}=\begin{pmatrix}    (f,\varphi_{0})\\    (f,\varphi_{1})\end{pmatrix}\]</span> <span class="math display">\[\varphi_{0}=(1,1,1,1,1,1,1,1,1)&#39;\]</span> <span class="math display">\[\varphi_{1}=(-3,-2,-1,0,1,2,3,4)&#39;\]</span> <span class="math display">\[f=(-3.2,-2.1,-1.2,0.1,0.9,2.1,3.3,4)&#39;\]</span></p><p><span class="math display">\[a_{0}=a,a_{1}=b\]</span> 可得： <span class="math display">\[\begin{bmatrix}8 &amp; 4 \\4 &amp; 44\end{bmatrix}\begin{pmatrix}    a\\    b\end{pmatrix}=\begin{pmatrix}    3.9\\    46\end{pmatrix}\]</span> 解得</p><p>a=1.048810，b=-0.036905</p><p>二次拟合即3by3 * 3by1=3by1，其中<span class="math inline">\(\varphi_{2}\)</span>为每个x的平方组成的列向量</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
             
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
-            
-            <tag> 线性代数 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -337,11 +331,42 @@
       
         <tags>
             
+            <tag> 线性代数 </tag>
+            
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
             
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-最小二乘法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="最小二乘拟合多项式">最小二乘拟合多项式</h1><p><span class="math display">\[\varphi_{0}=1,\varphi_{1}=x,\varphi_{2}=x^2,……\varphi_{n}=x^n\]</span> ## 例题 <span class="math display">\[x \quad -3\quad-2\quad-1\quad0\quad1\quad2\quad3\quad4\]</span> <span class="math display">\[f(x)\quad-3.2\quad-2.1\quad-1.2\quad0.1\quad0.9\quad2.1\quad3.3\quad4\]</span> 试用y=ax+b拟合</p><h2 id="题解">题解</h2><p><span class="math display">\[\begin{bmatrix}(\varphi_{0},\varphi_{0}) &amp; (\varphi_{0},\varphi_{1}) \\(\varphi_{1},\varphi_{0}) &amp; (\varphi_{1},\varphi_{1})\end{bmatrix}\begin{pmatrix}    a_{0}\\    a_{1}\end{pmatrix}=\begin{pmatrix}    (f,\varphi_{0})\\    (f,\varphi_{1})\end{pmatrix}\]</span> <span class="math display">\[\varphi_{0}=(1,1,1,1,1,1,1,1,1)&#39;\]</span> <span class="math display">\[\varphi_{1}=(-3,-2,-1,0,1,2,3,4)&#39;\]</span> <span class="math display">\[f=(-3.2,-2.1,-1.2,0.1,0.9,2.1,3.3,4)&#39;\]</span></p><p><span class="math display">\[a_{0}=a,a_{1}=b\]</span> 可得： <span class="math display">\[\begin{bmatrix}8 &amp; 4 \\4 &amp; 44\end{bmatrix}\begin{pmatrix}    a\\    b\end{pmatrix}=\begin{pmatrix}    3.9\\    46\end{pmatrix}\]</span> 解得</p><p>a=1.048810，b=-0.036905</p><p>二次拟合即3by3 * 3by1=3by1，其中<span class="math inline">\(\varphi_{2}\)</span>为每个x的平方组成的列向量</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 线性代数 </tag>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 数值分析 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -470,11 +495,11 @@
       
         <tags>
             
+            <tag> 线性代数 </tag>
+            
             <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
-            
-            <tag> 线性代数 </tag>
             
         </tags>
       
