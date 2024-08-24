@@ -20,11 +20,11 @@
       
         <tags>
             
-            <tag> 生物化学 </tag>
-            
             <tag> 期末 </tag>
             
             <tag> 合格 </tag>
+            
+            <tag> 生物化学 </tag>
             
         </tags>
       
@@ -257,9 +257,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 编程 </tag>
             
             <tag> Leetcode </tag>
             
@@ -415,68 +415,6 @@
     
     
     <entry>
-      <title>数值分析-迭代</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 线性代数 </tag>
-            
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-Langrange插值</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="n1">n=1</h2><p><span class="math display">\[P_1(x) = y_0 \cdot \frac{x - x_1}{x_0 - x_1} + y_1 \cdot \frac{x -x_0}{x_1 - x_0}\]</span> ## n=2 <span class="math display">\[P_2(x) = y_0 \cdot \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}+ y_1 \cdot \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}+ y_2 \cdot \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}\]</span> ## 一般情况 <span class="math display">\[P_n(x) = \sum_{i=0}^{n} y_i \cdot \prod_{\substack{0 \leq j \leq n \\ j\neq i}} \frac{x - x_j}{x_i - x_j}\]</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 线性代数 </tag>
-            
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数值分析-最小二乘法</title>
       <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/"/>
       <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/</url>
@@ -508,11 +446,73 @@
     
     
     <entry>
+      <title>数值分析-迭代</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数值分析-牛顿法</title>
       <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
       <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-Langrange插值</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="n1">n=1</h2><p><span class="math display">\[P_1(x) = y_0 \cdot \frac{x - x_1}{x_0 - x_1} + y_1 \cdot \frac{x -x_0}{x_1 - x_0}\]</span> ## n=2 <span class="math display">\[P_2(x) = y_0 \cdot \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}+ y_1 \cdot \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}+ y_2 \cdot \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}\]</span> ## 一般情况 <span class="math display">\[P_n(x) = \sum_{i=0}^{n} y_i \cdot \prod_{\substack{0 \leq j \leq n \\ j\neq i}} \frac{x - x_j}{x_i - x_j}\]</span></p>]]></content>
       
       
       <categories>
@@ -711,9 +711,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 编程 </tag>
             
             <tag> Leetcode </tag>
             
@@ -780,37 +780,6 @@
     
     
     <entry>
-      <title>力扣-283</title>
-      <link href="/2024/07/08/leetcode_283/"/>
-      <url>/2024/07/08/leetcode_283/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>给定一个数组 nums，编写一个函数将所有 0移动到数组的末尾，同时保持非零元素的相对顺序。</p><p>请注意 ，必须在不复制数组的情况下原地对数组进行操作。</p><p>示例 1:</p><p>输入: nums = [0,1,0,3,12] 输出: [1,3,12,0,0] 示例 2:</p><p>输入: nums = [0] 输出: [0]</p><p>Python和双指针都忘得差不多了w <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        l=<span class="built_in">len</span>(nums)</span><br><span class="line">        ls=[]</span><br><span class="line">        zero=[]</span><br><span class="line">        count=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> x==<span class="number">0</span>:</span><br><span class="line">                zero.append(count)</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(zero) &gt; <span class="number">0</span>:</span><br><span class="line">                j = zero[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                j = -<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> j&gt;=<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(l):</span><br><span class="line">                <span class="keyword">if</span> nums[i] != <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">if</span> j &lt; i:</span><br><span class="line">                        a = nums[i]</span><br><span class="line">                        nums[i] = <span class="number">0</span></span><br><span class="line">                        nums[j] = a</span><br><span class="line">                        j = i</span><br><span class="line">                        ls.append(i)</span><br><span class="line">                <span class="keyword">elif</span> nums[i] == <span class="number">0</span>:</span><br><span class="line">                    ls.append(i)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(ls) &gt; <span class="number">0</span> <span class="keyword">and</span> j &gt;= ls[<span class="number">0</span>]:</span><br><span class="line">                    j = ls[<span class="number">0</span>]</span><br><span class="line">                    ls.pop(<span class="number">0</span>)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>直接原地remove，但不知道为什么力扣上过不了样例，pycharm上可以。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        cnt=<span class="number">0</span></span><br><span class="line">        ls=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            ls.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i]==<span class="number">0</span>:</span><br><span class="line">                ls.remove(<span class="number">0</span>)</span><br><span class="line">                cnt+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(cnt):</span><br><span class="line">            ls.append(<span class="number">0</span>)</span><br><span class="line">        nums=ls.copy()</span><br></pre></td></tr></table></figure></p><p>题解：被自己蠢到了w <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums</span>):</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">:type nums: List[int]</span></span><br><span class="line"><span class="string">:rtype: None Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># 第一次遍历的时候，j指针记录非0的个数，只要是非0的统统都赋给nums[j]</span></span><br><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="built_in">len</span>(nums)):</span><br><span class="line"><span class="keyword">if</span> nums[i]:</span><br><span class="line">nums[j] = nums[i]</span><br><span class="line">j += <span class="number">1</span></span><br><span class="line"><span class="comment"># 非0元素统计完了，剩下的都是0了</span></span><br><span class="line"><span class="comment"># 所以第二次遍历把末尾的元素都赋为0即可</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(j,<span class="built_in">len</span>(nums)):</span><br><span class="line">nums[i] = <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 力扣のSonata </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 编程 </tag>
-            
-            <tag> Python </tag>
-            
-            <tag> Leetcode </tag>
-            
-            <tag> 力扣 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>力扣-2909</title>
       <link href="/2024/07/08/leetcode_2909/"/>
       <url>/2024/07/08/leetcode_2909/</url>
@@ -827,9 +796,40 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> 编程 </tag>
             
+            <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣-283</title>
+      <link href="/2024/07/08/leetcode_283/"/>
+      <url>/2024/07/08/leetcode_283/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>给定一个数组 nums，编写一个函数将所有 0移动到数组的末尾，同时保持非零元素的相对顺序。</p><p>请注意 ，必须在不复制数组的情况下原地对数组进行操作。</p><p>示例 1:</p><p>输入: nums = [0,1,0,3,12] 输出: [1,3,12,0,0] 示例 2:</p><p>输入: nums = [0] 输出: [0]</p><p>Python和双指针都忘得差不多了w <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        l=<span class="built_in">len</span>(nums)</span><br><span class="line">        ls=[]</span><br><span class="line">        zero=[]</span><br><span class="line">        count=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> x==<span class="number">0</span>:</span><br><span class="line">                zero.append(count)</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(zero) &gt; <span class="number">0</span>:</span><br><span class="line">                j = zero[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                j = -<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> j&gt;=<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(l):</span><br><span class="line">                <span class="keyword">if</span> nums[i] != <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">if</span> j &lt; i:</span><br><span class="line">                        a = nums[i]</span><br><span class="line">                        nums[i] = <span class="number">0</span></span><br><span class="line">                        nums[j] = a</span><br><span class="line">                        j = i</span><br><span class="line">                        ls.append(i)</span><br><span class="line">                <span class="keyword">elif</span> nums[i] == <span class="number">0</span>:</span><br><span class="line">                    ls.append(i)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">len</span>(ls) &gt; <span class="number">0</span> <span class="keyword">and</span> j &gt;= ls[<span class="number">0</span>]:</span><br><span class="line">                    j = ls[<span class="number">0</span>]</span><br><span class="line">                    ls.pop(<span class="number">0</span>)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>直接原地remove，但不知道为什么力扣上过不了样例，pycharm上可以。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        cnt=<span class="number">0</span></span><br><span class="line">        ls=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            ls.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i]==<span class="number">0</span>:</span><br><span class="line">                ls.remove(<span class="number">0</span>)</span><br><span class="line">                cnt+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(cnt):</span><br><span class="line">            ls.append(<span class="number">0</span>)</span><br><span class="line">        nums=ls.copy()</span><br></pre></td></tr></table></figure></p><p>题解：被自己蠢到了w <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums</span>):</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">:type nums: List[int]</span></span><br><span class="line"><span class="string">:rtype: None Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># 第一次遍历的时候，j指针记录非0的个数，只要是非0的统统都赋给nums[j]</span></span><br><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="built_in">len</span>(nums)):</span><br><span class="line"><span class="keyword">if</span> nums[i]:</span><br><span class="line">nums[j] = nums[i]</span><br><span class="line">j += <span class="number">1</span></span><br><span class="line"><span class="comment"># 非0元素统计完了，剩下的都是0了</span></span><br><span class="line"><span class="comment"># 所以第二次遍历把末尾的元素都赋为0即可</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> xrange(j,<span class="built_in">len</span>(nums)):</span><br><span class="line">nums[i] = <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 力扣のSonata </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> Python </tag>
+            
+            <tag> 编程 </tag>
             
             <tag> Leetcode </tag>
             
@@ -858,9 +858,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 编程 </tag>
             
             <tag> Leetcode </tag>
             
@@ -1030,11 +1030,11 @@
       
         <tags>
             
+            <tag> 分析化学 </tag>
+            
             <tag> 期末 </tag>
             
             <tag> 合格 </tag>
-            
-            <tag> 分析化学 </tag>
             
         </tags>
       
@@ -1142,9 +1142,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
