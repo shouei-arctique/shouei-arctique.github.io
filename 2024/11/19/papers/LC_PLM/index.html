@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>《LC-PLM》 | Shouei的Blog</title><meta name="author" content="Shouei"><meta name="copyright" content="Shouei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ABSTRACT 近年来，自监督训练的语言模型在蛋白质序列的学习和生成性药物设计方面取得了巨大成功。许多蛋白质语言模型（protein LMs）基于Transformer架构，这些模型在蛋白质序列中提取出有意义的表示，并应用于下游任务。然而，Transformer模型的上下文长度有限，对于更长的蛋白质序列或蛋白质复合物，其表现相对较差。此外，Transformer在处理涉及蛋白质相互作用和生物">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《LC-PLM》">
+<meta property="og:url" content="https://shouei-arctique.github.io/2024/11/19/papers/LC_PLM/index.html">
+<meta property="og:site_name" content="Shouei的Blog">
+<meta property="og:description" content="ABSTRACT 近年来，自监督训练的语言模型在蛋白质序列的学习和生成性药物设计方面取得了巨大成功。许多蛋白质语言模型（protein LMs）基于Transformer架构，这些模型在蛋白质序列中提取出有意义的表示，并应用于下游任务。然而，Transformer模型的上下文长度有限，对于更长的蛋白质序列或蛋白质复合物，其表现相对较差。此外，Transformer在处理涉及蛋白质相互作用和生物">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://shouei-arctique.github.io/img/gold_cpp.jpg">
+<meta property="article:published_time" content="2024-11-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-19T14:01:37.074Z">
+<meta property="article:author" content="Shouei">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shouei-arctique.github.io/img/gold_cpp.jpg"><link rel="shortcut icon" href="/img/skrzk.jpg"><link rel="canonical" href="https://shouei-arctique.github.io/2024/11/19/papers/LC_PLM/index.html"><link rel="preconnect" href="//cdnjs.cloudflare.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdnjs.cloudflare.com/ajax/libs/egjs-infinitegrid/4.11.1/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《LC-PLM》',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-19 22:01:37'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/scrollbar.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/airi_mio.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/likes/"><i class="fa-fw fa fa-heart"></i><span> 趣味</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/gold_cpp.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Shouei的Blog"><span class="site-name">Shouei的Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/likes/"><i class="fa-fw fa fa-heart"></i><span> 趣味</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《LC-PLM》</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-18T16:00:00.000Z" title="发表于 2024-11-19 00:00:00">2024-11-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-19T14:01:37.074Z" title="更新于 2024-11-19 22:01:37">2024-11-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AB%96%E6%96%87%E3%81%AEConcerto/">論文のConcerto</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《LC-PLM》"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="abstract">ABSTRACT</h1>
+<p>近年来，自监督训练的语言模型在蛋白质序列的学习和生成性药物设计方面取得了巨大成功。许多蛋白质语言模型（protein
+LMs）基于Transformer架构，这些模型在蛋白质序列中提取出有意义的表示，并应用于下游任务。然而，Transformer模型的上下文长度有限，对于更长的蛋白质序列或蛋白质复合物，其表现相对较差。此外，Transformer在处理涉及蛋白质相互作用和生物网络中的动态机制时也存在局限性。为了克服这些问题，本文提出了一种新型的蛋白质语言模型，称为LC-PLM，基于BiMamba-S架构（<em>选择性结构状态空间模型</em>）来提升对长蛋白质序列的建模能力。LC-PLM采用了一种新的双向共享投影层设计，使其能够有效地捕捉氨基酸级别的细粒度信息。与此同时，LC-PLM的变体LC-PLM-G通过结合蛋白质-蛋白质相互作用（PPI）图，进一步在第二阶段的训练中加入生物学相互作用的上下文信息，提升了蛋白质结构和功能预测任务的表现。</p>
+<h1 id="introduction">INTRODUCTION</h1>
+<h2 id="研究空白">研究空白</h2>
+<ul>
+<li>尽管在DNA序列建模中已经证明SSM架构的潜力，但在蛋白质语言建模中的应用仍然有限。</li>
+<li>如何利用这些架构的长上下文能力来建模蛋白质序列的图结构（如PPI图）尚未得到充分研究。</li>
+</ul>
+<h2 id="本研究的贡献">本研究的贡献</h2>
+<ul>
+<li>本文提出了LC-PLM（Long-context Protein Language
+Model）和其图上下文扩展模型LC-PLM-G，以克服上述问题。</li>
+<li>LC-PLM基于BiMamba-S架构，通过掩码语言建模（masked language
+modeling，MLM）学习蛋白质序列的高质量表示。</li>
+<li>LC-PLM-G通过随机游走策略，将PPI图上下文引入到蛋白质语言模型中，从而捕获生物相互作用信息。</li>
+</ul>
+<h2 id="创新点与总结">创新点与总结</h2>
+<p>LC-PLM通过高效的SSM架构实现了： - 更好的神经扩展性（Neural Scaling
+Laws）。 - 更强的长度外推能力。 -
+比基于Transformer的ESM-2模型在下游任务上性能提升7%-34%。</p>
+<p>LC-PLM-G利用第二阶段的图上下文训练，在蛋白质功能预测、远程同源检测和PPI链接预测任务中表现出色。</p>
+<p>研究展示了长上下文能力和生物交互信息的结合如何推动蛋白质语言建模的性能极限</p>
+<h2 id="lc-plm-long-context-protein-language-model">LC-PLM: LONG CONTEXT
+PROTEIN LANGUAGE MODEL</h2>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/2024/11/19/papers/LC_PLM/image.png"></p>
+<p>先随机掩码，再embedding表示，进入BiMamba-S模块，再预测[Mask]处概率，计算交叉熵损失。</p>
+<p>LC-PLM 是一种基于 <strong>BiMamba-S</strong>
+架构的新型长上下文蛋白语言模型，旨在解决当前基于 Transformer
+的蛋白语言模型在处理长序列或复杂图结构任务中的局限性。本文通过创新的架构设计和两阶段训练策略，显著提高了模型的长上下文建模能力和生物学任务表现。以下是详细介绍：</p>
+<hr>
+<h2 id="模型架构设计bimamba-s">1. 模型架构设计：BiMamba-S</h2>
+<h3 id="bimamba-的基础设计">1.1 BiMamba 的基础设计</h3>
+<p>BiMamba 是 Mamba
+模型的扩展，其架构基于选择性结构化状态空间模型（SSMs），专注于建模长序列数据。关键特性如下：
+- <strong>捕获长距离依赖关系</strong>： - SSM
+模块基于线性动态系统设计，能够有效捕获序列中的长距离依赖信息。 -
+通过选择机制，在序列维度动态调整参数，实现复杂交互关系的建模。 -
+<strong>双向扫描</strong>： -
+输入序列从头到尾和从尾到头分别处理，结合正向和反向路径的信息，捕获全局上下文依赖。
+- 特别适合掩码语言建模（MLM），能生成全面的序列表示。</p>
+<h3 id="bimamba-s-的改进与优势">1.2 BiMamba-S 的改进与优势</h3>
+<p>在 BiMamba 的基础上，LC-PLM 引入以下改进，形成 BiMamba-S： -
+<strong>共享投影层（Shared Projection Layers）</strong>： -
+正向路径和反向路径共用线性投影层，使模型在几乎不增加参数量的情况下实现更大的深度。
+- 共享投影层的设计降低了计算开销，同时提高了模型性能（评估损失降低
+4.5%）。 - <strong>未绑定输入和输出嵌入（Untied Input &amp; Output
+Embeddings）</strong>： -
+输入嵌入和输出嵌入分离，避免传统方法中的各向异性问题。 -
+提升了模型的表达能力和评估性能。</p>
+<h3 id="bimamba-s-的工作流程">1.3 BiMamba-S 的工作流程</h3>
+<p>BiMamba-S 的主要步骤如下： 1. <strong>输入处理</strong>： -
+输入序列经过归一化并通过线性投影层生成特征表示。 -
+特征分为正向路径和反向路径处理。 2. <strong>SSM 模块计算</strong>： -
+正向路径特征通过标准 Mamba 模块处理，捕获序列正向信息。 -
+反向路径特征通过翻转序列后同样输入 Mamba 模块处理。 -
+正向和反向的输出通过残差连接与输入结合。 3. <strong>预测头</strong>： -
+最终输出经过归一化后输入预测头，用于生成掩码语言建模的预测概率分布。</p>
+<h3 id="bimamba-s-的设计优势">1.4 BiMamba-S 的设计优势</h3>
+<ul>
+<li><strong>长距离建模能力</strong>：
+<ul>
+<li>能高效捕获长序列中的长距离依赖关系。</li>
+</ul></li>
+<li><strong>参数效率</strong>：
+<ul>
+<li>共享投影层使得模型深度加倍但参数量保持不变。</li>
+</ul></li>
+<li><strong>全局上下文捕获</strong>：
+<ul>
+<li>双向扫描设计使模型捕获头尾信息，生成更全面的表示。</li>
+</ul></li>
+</ul>
+<hr>
+<h2 id="双阶段训练策略">2. 双阶段训练策略</h2>
+<h3 id="第一阶段长上下文蛋白语言建模">2.1
+第一阶段：长上下文蛋白语言建模</h3>
+<ul>
+<li><strong>目标</strong>：
+<ul>
+<li>通过掩码语言建模（MLM）学习通用且细粒度的蛋白质序列表示。</li>
+</ul></li>
+<li><strong>训练数据</strong>：
+<ul>
+<li>数据来源于 UniRef50 数据集，包含约 20B 条蛋白质序列。</li>
+</ul></li>
+<li><strong>掩码策略</strong>：
+<ul>
+<li>随机选择 15% 的氨基酸（AA）作为目标掩码。
+<ul>
+<li>80% 替换为 <code>[MASK]</code>。</li>
+<li>10% 替换为随机 AA。</li>
+<li>10% 保持不变。</li>
+</ul></li>
+</ul></li>
+<li><strong>特点</strong>：
+<ul>
+<li>BiMamba-S 的 SSM 模块高效捕获长距离依赖。</li>
+<li>生成的表示在蛋白质家族、功能和结构等任务中通用。</li>
+</ul></li>
+</ul>
+<h3 id="第二阶段图上下文蛋白语言建模">2.2
+第二阶段：图上下文蛋白语言建模</h3>
+<ul>
+<li><strong>目标</strong>：
+<ul>
+<li>捕获蛋白质之间的交互信息，将模型优化为任务相关表示。</li>
+</ul></li>
+<li><strong>输入构建</strong>：
+<ul>
+<li><strong>随机游走生成序列</strong>：
+<ul>
+<li>在 PPI 图上进行随机游走，将每次游走的节点连接生成多蛋白序列。</li>
+<li>正样本由随机游走路径生成，负样本由断开的节点对生成。</li>
+</ul></li>
+<li><strong>特殊标记设计</strong>：
+<ul>
+<li><code>[BON]</code> 和 <code>[EON]</code>
+分别标记节点的开始和结束。</li>
+<li><code>[EDGE]</code> 和 <code>[NO_EDGE]</code>
+表示节点间是否存在边。</li>
+</ul></li>
+</ul></li>
+<li><strong>训练策略</strong>：
+<ul>
+<li>在 MLM 的基础上引入图拓扑信息，通过特殊标记优化模型。</li>
+</ul></li>
+</ul>
+<hr>
+<h2 id="设计选择的创新性与优势">3. 设计选择的创新性与优势</h2>
+<h3 id="bimamba-s-的优势">3.1 BiMamba-S 的优势</h3>
+<ul>
+<li><strong>优越的扩展性</strong>：
+<ul>
+<li>在处理超长序列时，评估损失显著低于基于 Transformer 的模型。</li>
+</ul></li>
+<li><strong>参数高效性</strong>：
+<ul>
+<li>共享投影层的设计使模型在保持相同参数量的情况下实现更深网络架构。</li>
+</ul></li>
+<li><strong>多任务适配性</strong>：
+<ul>
+<li>LC-PLM 可适配多种任务（如蛋白质功能预测和结构预测）。</li>
+</ul></li>
+</ul>
+<h3 id="图上下文的增强">3.2 图上下文的增强</h3>
+<ul>
+<li><strong>捕获生物学交互信息</strong>：
+<ul>
+<li>第二阶段通过 PPI 图增强，使模型更好理解蛋白质间的交互关系。</li>
+</ul></li>
+<li><strong>通用性与专用性结合</strong>：
+<ul>
+<li>第一阶段生成通用表示，第二阶段调整为任务相关的专用表示。</li>
+</ul></li>
+</ul>
+<hr>
+<h2 id="总结">总结</h2>
+<p>LC-PLM 通过 BiMamba-S
+实现了高效的长上下文蛋白语言建模，并结合双阶段训练策略，既能生成通用的蛋白质序列表示，又能捕获生物学交互信息。其创新性设计在蛋白质建模领域具有重要实践价值。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://shouei-arctique.github.io">Shouei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://shouei-arctique.github.io/2024/11/19/papers/LC_PLM/">https://shouei-arctique.github.io/2024/11/19/papers/LC_PLM/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://shouei-arctique.github.io" target="_blank">Shouei的Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></div><div class="post_share"><div class="social-share" data-image="/img/gold_cpp.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/11/18/%E6%95%B0%E6%A8%A1/apmcm2023c/" title="APCMC23-C"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/sakura.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">APCMC23-C</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/07/02/CS224W/" title="斯坦福CS224W"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/bocchi.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-02</div><div class="title">斯坦福CS224W</div></div></a></div><div><a href="/2024/08/28/data_feature/" title="数据预处理和特征工程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/megane.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-28</div><div class="title">数据预处理和特征工程</div></div></a></div><div><a href="/2024/10/03/peptidebert/" title="《PeptideBERT》"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/gold_cpp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-03</div><div class="title">《PeptideBERT》</div></div></a></div><div><a href="/2024/07/25/pre_cambridge/" title="pre in Cambridge"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/luoxuan.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-25</div><div class="title">pre in Cambridge</div></div></a></div><div><a href="/2024/07/06/pytorch_dl/" title="PyTorch深度学习实践"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/ryo.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-06</div><div class="title">PyTorch深度学习实践</div></div></a></div><div><a href="/2024/07/01/SenseXAMP/xxx/" title="《论文复现:SenseXAMP》"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/gold_cpp.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-01</div><div class="title">《论文复现:SenseXAMP》</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/airi_mio.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Shouei</div><div class="author-info__description">君は君らしく生きて行く自由があるんだ</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/shouei-arctique"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Blog工事中</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#abstract"><span class="toc-number">1.</span> <span class="toc-text">ABSTRACT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">2.</span> <span class="toc-text">INTRODUCTION</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E7%A9%BA%E7%99%BD"><span class="toc-number">2.1.</span> <span class="toc-text">研究空白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E7%A0%94%E7%A9%B6%E7%9A%84%E8%B4%A1%E7%8C%AE"><span class="toc-number">2.2.</span> <span class="toc-text">本研究的贡献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9%E4%B8%8E%E6%80%BB%E7%BB%93"><span class="toc-number">2.3.</span> <span class="toc-text">创新点与总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lc-plm-long-context-protein-language-model"><span class="toc-number">2.4.</span> <span class="toc-text">LC-PLM: LONG CONTEXT
+PROTEIN LANGUAGE MODEL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1bimamba-s"><span class="toc-number">2.5.</span> <span class="toc-text">1. 模型架构设计：BiMamba-S</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bimamba-%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.5.1.</span> <span class="toc-text">1.1 BiMamba 的基础设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bimamba-s-%E7%9A%84%E6%94%B9%E8%BF%9B%E4%B8%8E%E4%BC%98%E5%8A%BF"><span class="toc-number">2.5.2.</span> <span class="toc-text">1.2 BiMamba-S 的改进与优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bimamba-s-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.5.3.</span> <span class="toc-text">1.3 BiMamba-S 的工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bimamba-s-%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%8A%BF"><span class="toc-number">2.5.4.</span> <span class="toc-text">1.4 BiMamba-S 的设计优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E9%98%B6%E6%AE%B5%E8%AE%AD%E7%BB%83%E7%AD%96%E7%95%A5"><span class="toc-number">2.6.</span> <span class="toc-text">2. 双阶段训练策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E8%9B%8B%E7%99%BD%E8%AF%AD%E8%A8%80%E5%BB%BA%E6%A8%A1"><span class="toc-number">2.6.1.</span> <span class="toc-text">2.1
+第一阶段：长上下文蛋白语言建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E5%9B%BE%E4%B8%8A%E4%B8%8B%E6%96%87%E8%9B%8B%E7%99%BD%E8%AF%AD%E8%A8%80%E5%BB%BA%E6%A8%A1"><span class="toc-number">2.6.2.</span> <span class="toc-text">2.2
+第二阶段：图上下文蛋白语言建模</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E9%80%89%E6%8B%A9%E7%9A%84%E5%88%9B%E6%96%B0%E6%80%A7%E4%B8%8E%E4%BC%98%E5%8A%BF"><span class="toc-number">2.7.</span> <span class="toc-text">3. 设计选择的创新性与优势</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bimamba-s-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">2.7.1.</span> <span class="toc-text">3.1 BiMamba-S 的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%B8%8A%E4%B8%8B%E6%96%87%E7%9A%84%E5%A2%9E%E5%BC%BA"><span class="toc-number">2.7.2.</span> <span class="toc-text">3.2 图上下文的增强</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.8.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/gold_cpp.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Shouei</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.8/lazyload.iife.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rO2XG4HdGpEJhCgqT22ubmzE-gzGzoHsz',
+      appKey: 'LBGdPxjlbtoA9bgZIWU1ifM4',
+      avatar: 'monsterid',
+      serverURLs: 'https://ro2xg4hd.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="/js/title.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/click-show-text.min.js" data-mobile="false" data-text="博学,慎思,明辨,笃行" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/img/ayame.jpg);"> <a class="categoryBar-list-link" href="categories/修考のFantasia/">修考のFantasia</a><span class="categoryBar-list-count">16</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/stage.jpg);"> <a class="categoryBar-list-link" href="categories/机器学习のEtude/">机器学习のEtude</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/conbini.jpg);"> <a class="categoryBar-list-link" href="categories/製薬のConcerto/">製薬のConcerto</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/ema.jpg);"> <a class="categoryBar-list-link" href="categories/PythonのEtude/">PythonのEtude</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/shojo_piano.jpg);"> <a class="categoryBar-list-link" href="categories/推理のSonata/">推理のSonata</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/120232182.jpg);"> <a class="categoryBar-list-link" href="categories/論文のConcerto/">論文のConcerto</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/orangestar.jpg);"> <a class="categoryBar-list-link" href="categories/生信のEtude/">生信のEtude</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/yangtai.png);"> <a class="categoryBar-list-link" href="categories/杂文のSymphony/">杂文のSymphony</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/flow.jpg);"> <a class="categoryBar-list-link" href="categories/数模のSymphony/">数模のSymphony</a><span class="categoryBar-list-count">9</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/osanai.jpg);"> <a class="categoryBar-list-link" href="categories/刷题のSonata/">刷题のSonata</a><span class="categoryBar-list-count">9</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(/img/machi.jpg);"> <a class="categoryBar-list-link" href="categories/数据结构のEtude/">数据结构のEtude</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/03/new2/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/xiduo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-03</span><a class="blog-slider__title" href="2024/07/03/new2/" alt="">帽子戏法</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2024/07/03/new2/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/01/oop/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/hongxia.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-01</span><a class="blog-slider__title" href="2024/07/01/oop/" alt="">Python面向对象编程 (上)</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2024/07/01/oop/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/06/pytorch_dl/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/ryo.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-06</span><a class="blog-slider__title" href="2024/07/06/pytorch_dl/" alt="">PyTorch深度学习实践</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2024/07/06/pytorch_dl/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/07/02/CS224W/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/bocchi.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-02</span><a class="blog-slider__title" href="2024/07/02/CS224W/" alt="">斯坦福CS224W</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2024/07/02/CS224W/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
