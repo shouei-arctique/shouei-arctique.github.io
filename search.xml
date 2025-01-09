@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>TCR、MHC 和肽链之间的关系</title>
+      <link href="/2025/01/08/bioinfo/TCR_peptide_MHC/"/>
+      <url>/2025/01/08/bioinfo/TCR_peptide_MHC/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="tcrmhc-和肽链之间的关系"><strong>TCR、MHC和肽链之间的关系</strong></h1><p>TCR（T细胞受体）、MHC（主要组织相容性复合体）和抗原肽（peptide）之间有密切的功能和结构关系，它们共同构成了免疫系统中<strong>TCR-pMHC 复合物</strong>的核心。以下从结构和功能角度详细说明它们的关系：</p><hr><h2 id="mhc主要组织相容性复合体"><strong>1.MHC（主要组织相容性复合体）</strong></h2><h3 id="功能">功能</h3><ul><li>MHC是一种蛋白质复合物，位于抗原呈递细胞（如树突状细胞、巨噬细胞）的表面。</li><li>主要作用是将外来或自身蛋白的降解产物（即抗原肽）呈递给 T细胞，激活免疫应答。</li><li>根据其结构和功能分为两类：<ol type="1"><li><strong>MHC Class I</strong>：主要在几乎所有有核细胞中表达，向<strong>CD8+ T 细胞</strong>（杀伤性 T细胞）呈递内源性抗原（如病毒蛋白）。</li><li><strong>MHC Class II</strong>：主要在抗原呈递细胞中表达，向<strong>CD4+ T 细胞</strong>（辅助性 T细胞）呈递外源性抗原（如细菌蛋白）。</li></ol></li></ul><h3 id="与肽链的关系">与肽链的关系</h3><ul><li>MHC 的结构包含一个 <strong>肽结合槽（peptide-bindinggroove）</strong>，负责结合抗原肽（通常是 8-25 个氨基酸）。</li><li>MHC 通过肽槽的适配性选择性结合特定长度和特征的肽链。</li></ul><hr><h2 id="肽链抗原肽peptide"><strong>2.肽链（抗原肽，peptide）</strong></h2><h3 id="功能-1">功能</h3><ul><li>抗原肽是由病原体（病毒、细菌）或宿主细胞内的蛋白质降解产生的小分子肽段。</li><li>它被 MHC 结合后，作为识别信号呈递给TCR，用于区分“自我”和“非自我”成分。</li></ul><h3 id="与-tcr-和-mhc-的关系">与 TCR 和 MHC 的关系</h3><ul><li><strong>与 MHC</strong>：抗原肽嵌入 MHC的肽结合槽，并通过氢键、疏水作用等与 MHC 结合形成稳定的 <strong>pMHC复合物</strong>。</li><li><strong>与TCR</strong>：抗原肽的氨基酸序列和空间结构决定了是否能被特定的 TCR识别。TCR 与肽段的接触点往往集中在肽链的中间区域（核心段）。</li></ul><hr><h2 id="tcrt-细胞受体"><strong>3. TCR（T 细胞受体）</strong></h2><h3 id="功能-2">功能</h3><ul><li>TCR 是表达在 T 细胞表面的一种异二聚体蛋白，负责识别 MHC提呈的抗原肽。</li><li>每个 TCR 都具有特定的抗原特异性，即只能识别特定的 pMHC 复合物。</li></ul><h3 id="结构">结构</h3><ul><li>由两条链（<strong>α链和β链</strong>，或在少数情况下<strong>γ链和δ链</strong>）组成。</li><li>两条链的 <strong>可变区（Variable Region）</strong>形成一个抗原结合位点，直接与 pMHC 复合物相互作用。</li><li><strong>CDR 环（互补决定区）</strong> 是 TCR上直接参与结合的关键区域，尤其是<strong>CDR3</strong>，它对肽段识别至关重要。</li></ul><h3 id="与-mhc-和肽链的关系">与 MHC 和肽链的关系</h3><ul><li><strong>与 MHC</strong>：TCR 的部分 CDR 环（如 CDR1 和 CDR2）直接与MHC 的表面区域（如 α1 和 α2 或 β1 和 β2域）相互作用，用于辅助稳定结合。</li><li><strong>与肽链</strong>：TCR 的 CDR3 环特异性结合 MHC中的肽链。肽链中氨基酸的序列和构象对 TCR 的识别至关重要。</li></ul><hr><h2 id="三者如何协同作用"><strong>4. 三者如何协同作用</strong></h2><ol type="1"><li><strong>MHC 加载肽链</strong>：<ul><li>肽链通过抗原呈递细胞的处理后，被加载到 MHC 的肽结合槽中，形成<strong>pMHC（peptide-MHC 复合物）</strong>。</li></ul></li><li><strong>pMHC 激活 TCR</strong>：<ul><li>TCR 通过其可变区与 pMHC 的抗原肽和 MHC 两部分同时结合。</li><li>TCR 对肽链的结合通常是高度特异的，少量氨基酸的突变可能会影响 TCR的识别能力。</li></ul></li><li><strong>免疫应答的启动</strong>：<ul><li>如果 TCR 成功识别 pMHC 复合物，则触发 T细胞活化，进而引发特定的免疫应答（如细胞毒作用或分泌细胞因子）。</li></ul></li></ol><hr><h2 id="关系总结层次结构与功能关联"><strong>5.关系总结：层次结构与功能关联</strong></h2><ul><li><strong>MHC</strong> 提供一个“舞台”来展示<strong>肽链</strong>（抗原）。</li><li><strong>肽链</strong> 是被识别的“信号”，用于区分病原体与自身。</li><li><strong>TCR</strong> 是“侦察兵”，专门识别由 MHC提呈的肽链，并决定免疫反应是否启动。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生信のEtude </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生物信息学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>药物毒理学-复习</title>
       <link href="/2024/12/03/toxic/"/>
       <url>/2024/12/03/toxic/</url>
@@ -341,6 +366,31 @@
     
     
     <entry>
+      <title>2021年广一模数学导数</title>
+      <link href="/2024/09/10/articles/daoshu/"/>
+      <url>/2024/09/10/articles/daoshu/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="problem">Problem:</h2><p><img src="/2024/09/10/articles/daoshu/timu.jpg"></p><h2 id="answer-for-2">Answer for (2) :</h2><p>因为 [ f(x) = x^{2},() - a (x&gt;0), ] 设 [ g(x) ;=; ;-; a (x&gt;0),] 所以 (f(x)) 的零点即为 (g(x)) 的零点。</p><p>因为 (g'(x) = -,).</p><ul><li>当 (x (0,1)) 时，(g'(x) &gt; 0)，(g(x)) 单调递增；<br></li><li>当 (x (1,,+)) 时，(g'(x) &lt; 0)，(g(x)) 单调递减。</li></ul><p>因为 (g(x)) 有两个零点，则必有 (g(1)=1-a&gt;0)，且 (x +) 时(g(x)-,a&lt;0)，<br>得 (0&lt;a&lt;1.)</p><p>因为 (g()=-,a&lt;0)，所以 (&lt;x_{1}&lt;1&lt;x_{2}.)</p><p>依函数关系<br>[ g(x_1) - g(2 - x_1), ]<br>定义<br>[ F(x) ;=; g(x);-;g(2 - x), (&lt;x&lt;1). ]<br>则其导数为<br>[ F'(x) ;=; -, ;-; ;=; -, ;+; . ]</p><p>因为 ((2 - x)^{2} &gt; x^{2}) 且 ((2 - x) &lt; x)，</p><p>所以 (F'(x) &gt; 0.)<br>所以 (F(x)) 在 ((,,1)) 上单调递增。<br>所以 (F(x) &lt; F(1)=0.)</p><p>所以 (g(x) - g(2-x) &lt; 0.)<br>所以 (g(x_{1}) &lt; g(2 - x_{1}).)<br>所以 (g(x_{2}) &lt; g(2 - x_{2}).)</p><p>因为 (&lt;x_{1}&lt;1&lt;x_{2},) 则 (2 - x_{1} &gt; 1.)<br>因为 (g(x)) 在 ((1,,+)) 上单调递减，<br>所以 (x_{2} &gt; 2 - x_{1})，即 (x_{1} + x_{2} &gt; 2.)</p><p>结合条件 (x_{2} &gt; 2,x_{1}) 可知，满足条件的点 ((x_{1},x_{2}))必在不等式组</p>[<span class="math display">\[\begin{cases}x_{1} + x_{2} &gt; 2,\\x_{2} &gt; 2\,x_{1},\end{cases}\]</span><p>]</p><p>表示的平面区域内，且 (&lt;x_{1}&lt;1.)</p><p>由 (x_{1} + x_{2} = 2) 和 (x_{2} = 2,x_{1}) 相交点 [ P(,,). ]</p><p>满足条件的点 ((x_{1},,x_{2})) 到原点的距离 [ ;=; ;=; ;=; . ]</p><p>因为 [ ()^{2} ;-; ()^{2} ;=; ;&gt;; 0, ] 得 ( &gt; ,) 所以 ( &gt;.)</p><figure><img src="/2024/09/10/articles/daoshu/photo.jpg" alt="如图"><figcaption aria-hidden="true">如图</figcaption></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂文のSymphony </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 推理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>形式主义的发端-视知觉与心理</title>
       <link href="/2024/09/10/articles/film1/"/>
       <url>/2024/09/10/articles/film1/</url>
@@ -440,9 +490,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
@@ -596,9 +646,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 大学院入試 </tag>
             
@@ -667,6 +717,31 @@
     
     
     <entry>
+      <title>CUMCM2020-A</title>
+      <link href="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/"/>
+      <url>/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="基于一维热传导方程的回焊炉炉温模型">基于一维热传导方程的回焊炉炉温模型</h1><h2 id="题目类型与评价">题目类型与评价</h2><p>传热问题和多目标规划问题的范文。</p><p>求解过程基本可以复制粘贴到其他传热问题(比如2018A)</p><h2 id="摘要">摘要</h2><p>对于每一个问题，通过“将该问题转换为……”“实质上是……”来进行模型分类和化归。</p><p>关键词：一维热传导方程、遗传算法、多变量非线性规划、分层序列法</p><h2 id="问题重述">问题重述</h2><p>把原题的图的表都复制了一遍</p><h2 id="模型假设">模型假设</h2><p>可以抄知网论文的</p><h2 id="符号说明">符号说明</h2><h2 id="问题分析">问题分析</h2><h3 id="问题一分析">问题一分析</h3><ul><li>合理简化实际情况，列出热传导方程组，确定边界条件。</li><li>采用合理的方法解方程，并分段求出各个温区对应的热学参数，使得模型预测结果与附件所给结果之间的均方根误差最小。</li><li>代入问题一所给的各温区温度和过炉速度，计算炉温曲线。</li></ul><p>画图</p><h3 id="问题二分析">问题二分析</h3><h3 id="问题三分析">问题三分析</h3><p>画图</p><h3 id="问题四分析">问题四分析</h3><h2 id="模型建立">模型建立</h2><p>图示工件和环境的关系</p><h3 id="热传导方程的建立">热传导方程的建立</h3><h3 id="边界条件的确定与模型的建立">边界条件的确定与模型的建立</h3><h2 id="问题解答">问题解答</h2><h3 id="炉内环境温度的计算">炉内环境温度的计算</h3><p>此时炉内温度的分布具有线性形式。因此，我们认为小温区、炉前区域、炉后区域之间的间隙处温度分布是线性的，并认为炉外一切区域的温度都与室内相同。</p><p>可视化实验中的环境温度</p><h3 id="有限差分法解pde方程">有限差分法解PDE方程</h3><p>有限差分法解偏微分方程示意图</p><h3 id="模型热学参数的确定">模型热学参数的确定</h3><p>假设每个区域的k和h都相等，仅考虑a的不同</p><p>模拟数据和实验数据的炉温曲线对比图</p><h3 id="问题一的求解">问题一的求解</h3><p>根据上文计算的……</p><p>经过检验，本题中求得的炉温曲线满足制程界限约束。并按照……写入文件中。</p><p>可视化</p><p><em>温度分布伪彩图</em></p><h3 id="题目二求解">题目二求解</h3><p>1）约束条件公式表达</p><p>2）约束条件说明</p><p>搜索过程可视化</p><p>从图中可以观察到……可近似认为它们是关于过炉速度的单调函数，不存在陷入局部最优非全局最优的情况。</p><h3 id="题目三求解">题目三求解</h3><h4 id="面积计算">面积计算</h4><p>解模函数</p><h4 id="遗传算法">遗传算法</h4><p>图解遗传算法</p><p>为尽可能减少遗传算法结果的不确定性，我们进行了多次独立重复求解。利用MATLAB的遗传算法工具箱编程并调整算法参数，将每次得到的潜在最优解记录在表3中：</p><p>描述面积小的充分条件；解释遗传算法求解结果</p><h3 id="题目四求解">题目四求解</h3><p>刻画曲线对称性偏差的函数</p><p>转化为双目标线性规划问题</p><h4 id="分层序列法">分层序列法</h4><p><strong>摘录</strong>：</p><p>如果目标函数fi具有比fj更高的优先性，那么我们可以采用简单分层序列法。该方法的局限性是，若某一步最优化解是唯一的，其后所有步骤的解也是唯一的，致使之后所有目标函数失去意义。因此，求解较上层优化问题时，需要给予优化结果一定的宽容度。引进一系列充分小的正数lambda1、lambda2……</p><h4 id="接力进化的遗传算法">接力进化的遗传算法</h4><p>可视化对称性比较</p><h2 id="模型总结">模型总结</h2><h3 id="灵敏度">灵敏度</h3><p>改变搜索步长</p><h3 id="优缺点">优缺点</h3><p>多目标规划和传热问题都可以套</p><p><img src="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/image.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数模のSymphony </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数模 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>归并排序</title>
       <link href="/2024/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/mergesort/"/>
       <url>/2024/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/mergesort/</url>
@@ -686,31 +761,6 @@
             <tag> 数据结构 </tag>
             
             <tag> 算法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CUMCM2020-A</title>
-      <link href="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/"/>
-      <url>/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="基于一维热传导方程的回焊炉炉温模型">基于一维热传导方程的回焊炉炉温模型</h1><h2 id="题目类型与评价">题目类型与评价</h2><p>传热问题和多目标规划问题的范文。</p><p>求解过程基本可以复制粘贴到其他传热问题(比如2018A)</p><h2 id="摘要">摘要</h2><p>对于每一个问题，通过“将该问题转换为……”“实质上是……”来进行模型分类和化归。</p><p>关键词：一维热传导方程、遗传算法、多变量非线性规划、分层序列法</p><h2 id="问题重述">问题重述</h2><p>把原题的图的表都复制了一遍</p><h2 id="模型假设">模型假设</h2><p>可以抄知网论文的</p><h2 id="符号说明">符号说明</h2><h2 id="问题分析">问题分析</h2><h3 id="问题一分析">问题一分析</h3><ul><li>合理简化实际情况，列出热传导方程组，确定边界条件。</li><li>采用合理的方法解方程，并分段求出各个温区对应的热学参数，使得模型预测结果与附件所给结果之间的均方根误差最小。</li><li>代入问题一所给的各温区温度和过炉速度，计算炉温曲线。</li></ul><p>画图</p><h3 id="问题二分析">问题二分析</h3><h3 id="问题三分析">问题三分析</h3><p>画图</p><h3 id="问题四分析">问题四分析</h3><h2 id="模型建立">模型建立</h2><p>图示工件和环境的关系</p><h3 id="热传导方程的建立">热传导方程的建立</h3><h3 id="边界条件的确定与模型的建立">边界条件的确定与模型的建立</h3><h2 id="问题解答">问题解答</h2><h3 id="炉内环境温度的计算">炉内环境温度的计算</h3><p>此时炉内温度的分布具有线性形式。因此，我们认为小温区、炉前区域、炉后区域之间的间隙处温度分布是线性的，并认为炉外一切区域的温度都与室内相同。</p><p>可视化实验中的环境温度</p><h3 id="有限差分法解pde方程">有限差分法解PDE方程</h3><p>有限差分法解偏微分方程示意图</p><h3 id="模型热学参数的确定">模型热学参数的确定</h3><p>假设每个区域的k和h都相等，仅考虑a的不同</p><p>模拟数据和实验数据的炉温曲线对比图</p><h3 id="问题一的求解">问题一的求解</h3><p>根据上文计算的……</p><p>经过检验，本题中求得的炉温曲线满足制程界限约束。并按照……写入文件中。</p><p>可视化</p><p><em>温度分布伪彩图</em></p><h3 id="题目二求解">题目二求解</h3><p>1）约束条件公式表达</p><p>2）约束条件说明</p><p>搜索过程可视化</p><p>从图中可以观察到……可近似认为它们是关于过炉速度的单调函数，不存在陷入局部最优非全局最优的情况。</p><h3 id="题目三求解">题目三求解</h3><h4 id="面积计算">面积计算</h4><p>解模函数</p><h4 id="遗传算法">遗传算法</h4><p>图解遗传算法</p><p>为尽可能减少遗传算法结果的不确定性，我们进行了多次独立重复求解。利用MATLAB的遗传算法工具箱编程并调整算法参数，将每次得到的潜在最优解记录在表3中：</p><p>描述面积小的充分条件；解释遗传算法求解结果</p><h3 id="题目四求解">题目四求解</h3><p>刻画曲线对称性偏差的函数</p><p>转化为双目标线性规划问题</p><h4 id="分层序列法">分层序列法</h4><p><strong>摘录</strong>：</p><p>如果目标函数fi具有比fj更高的优先性，那么我们可以采用简单分层序列法。该方法的局限性是，若某一步最优化解是唯一的，其后所有步骤的解也是唯一的，致使之后所有目标函数失去意义。因此，求解较上层优化问题时，需要给予优化结果一定的宽容度。引进一系列充分小的正数lambda1、lambda2……</p><h4 id="接力进化的遗传算法">接力进化的遗传算法</h4><p>可视化对称性比较</p><h2 id="模型总结">模型总结</h2><h3 id="灵敏度">灵敏度</h3><p>改变搜索步长</p><h3 id="优缺点">优缺点</h3><p>多目标规划和传热问题都可以套</p><p><img src="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/image.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数模のSymphony </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数模 </tag>
             
         </tags>
       
@@ -918,9 +968,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
@@ -970,9 +1020,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1001,40 +1051,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
             
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-迭代</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
             <tag> 线性代数 </tag>
-            
-            <tag> 机器学习 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1063,9 +1082,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1078,42 +1097,11 @@
     
     
     <entry>
-      <title>数值分析-Langrange插值</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/</url>
+      <title>数值分析-迭代</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="n1">n=1</h2><p><span class="math display">\[P_1(x) = y_0 \cdot \frac{x - x_1}{x_0 - x_1} + y_1 \cdot \frac{x -x_0}{x_1 - x_0}\]</span> ## n=2 <span class="math display">\[P_2(x) = y_0 \cdot \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}+ y_1 \cdot \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}+ y_2 \cdot \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}\]</span> ## 一般情况 <span class="math display">\[P_n(x) = \sum_{i=0}^{n} y_i \cdot \prod_{\substack{0 \leq j \leq n \\ j\neq i}} \frac{x - x_j}{x_i - x_j}\]</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 线性代数 </tag>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-牛顿法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
       
       
       <categories>
@@ -1125,9 +1113,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1156,9 +1144,71 @@
       
         <tags>
             
+            <tag> 机器学习 </tag>
+            
             <tag> 线性代数 </tag>
             
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-Langrange插值</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/langrange/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="n1">n=1</h2><p><span class="math display">\[P_1(x) = y_0 \cdot \frac{x - x_1}{x_0 - x_1} + y_1 \cdot \frac{x -x_0}{x_1 - x_0}\]</span> ## n=2 <span class="math display">\[P_2(x) = y_0 \cdot \frac{(x - x_1)(x - x_2)}{(x_0 - x_1)(x_0 - x_2)}+ y_1 \cdot \frac{(x - x_0)(x - x_2)}{(x_1 - x_0)(x_1 - x_2)}+ y_2 \cdot \frac{(x - x_0)(x - x_1)}{(x_2 - x_0)(x_2 - x_1)}\]</span> ## 一般情况 <span class="math display">\[P_n(x) = \sum_{i=0}^{n} y_i \cdot \prod_{\substack{0 \leq j \leq n \\ j\neq i}} \frac{x - x_j}{x_i - x_j}\]</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-牛顿法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1289,9 +1339,9 @@
       
         <tags>
             
-            <tag> 线性代数 </tag>
-            
             <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
             
             <tag> 数值分析 </tag>
             
@@ -1376,9 +1426,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
@@ -1432,9 +1482,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
@@ -1463,9 +1513,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
@@ -1494,9 +1544,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> 力扣 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 力扣 </tag>
             
         </tags>
       
