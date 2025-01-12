@@ -8,7 +8,7 @@
       <link href="/2025/01/09/articles/daoshu/"/>
       <url>/2025/01/09/articles/daoshu/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="question">Question:</h2><p><img src="/2025/01/09/articles/daoshu/timu.jpg"></p><h2 id="preface">Preface：</h2><p>本文解法只是众多解法中的一种，但其出现在官方的标准解答中，反倒可以窥见其设计意图。</p><p>而本文解法以其罕见的思路入围我的导数TOP10。</p><p>当时老师介绍说是隔壁2班的同学考场复现了，现在回想起依然很佩服。</p><h2 id="answer-for-2">Answer for (2) :</h2><p>因为<br><span class="math display">\[f(x) = x^{2}\,\bigl(\frac{\ln x + 1}{x}\bigr) - a\quad (x&gt;0),\]</span> 设<br><span class="math display">\[g(x)=\frac{\ln x + 1}{x} - a\quad(x&gt;0),\]</span> 所以 (f(x)) 的零点即为 (g(x)) 的零点。</p><p>因为<br><span class="math display">\[g&#39;(x) = -\,\frac{\ln x}{x^{2}}.\]</span></p><ul><li>当 <span class="math inline">\(x \in (0,1)\)</span> 时，<span class="math inline">\(g&#39;(x) &gt; 0\)</span>，<span class="math inline">\(g(x)\)</span> <strong>单调递增</strong>；<br></li><li>当 <span class="math inline">\(x \in (1,\infty)\)</span> 时，<span class="math inline">\(g&#39;(x) &lt; 0\)</span>，<span class="math inline">\(g(x)\)</span> <strong>单调递减</strong>。</li></ul><p>因为 <span class="math inline">\(g(x)\)</span> 有两个零点，则必有<span class="math inline">\(g(1)=1-a&gt;0\)</span>，且 <span class="math inline">\(x \to \infty\)</span> 时 <span class="math inline">\(g(x)\to -a&lt;0\)</span>，<br>得 <span class="math inline">\(0 &lt; a &lt; 1.\)</span></p><p>因为<br><span class="math display">\[g\!\bigl(\tfrac{1}{e}\bigr) = -\,a &lt; 0,\]</span><br>所以<br><span class="math display">\[\tfrac{1}{e} &lt; x_{1} &lt; 1 &lt; x_{2}.\]</span></p><p>依函数关系<br><span class="math display">\[g(x_{1}) - g\bigl(2 - x_{1}\bigr),\]</span> 定义<br><span class="math display">\[F(x) = g(x) - g\bigl(2 - x\bigr),\quad\Bigl(\tfrac{1}{e}&lt;x&lt;1\Bigr).\]</span> 则其导数为<br><span class="math display">\[F&#39;(x)=-\frac{\ln x}{x^{2}}-\Bigl[-\frac{\ln(2 - x)}{(2 - x)^{2}}\Bigr]=-\frac{\ln x}{x^{2}}+\frac{\ln(2 - x)}{(2 - x)^{2}}.\]</span></p><p>因为 <span class="math inline">\((2 - x)^{2} &gt; x^{2}\)</span> 且<span class="math inline">\(\ln(2 - x) &lt; \ln x\)</span>， 所以 <span class="math inline">\(F&#39;(x) &gt; 0.\)</span> 所以 <span class="math inline">\(F(x)\)</span> 在 <span class="math inline">\(\bigl(\tfrac{1}{e},\,1\bigr)\)</span>上单调递增。<br>所以 <span class="math inline">\(F(x) &lt; F(1) = 0.\)</span></p><p>于是<br><span class="math display">\[g(x) - g(2 - x) &lt; 0,\]</span> 进而<br><span class="math display">\[g(x_{1}) &lt; g\bigl(2 - x_{1}\bigr),\quadg(x_{2}) &lt; g\bigl(2 - x_{2}\bigr).\]</span></p><p>因为 <span class="math inline">\(\tfrac{1}{e}\)</span>&lt;<span class="math inline">\(x_{1}&lt;1&lt;x_{2}\)</span>，则 <span class="math inline">\(2 - x_{1}\)</span> &gt; <span class="math inline">\(1\)</span>。</p><p>又因为 <span class="math inline">\(g(x)\)</span> 在 <span class="math inline">\((1,\infty)\)</span> 上单调递减，</p><p>所以 <span class="math inline">\(x_{2}\)</span> &gt; <span class="math inline">\(2 - x_{1}\)</span>，即 <span class="math inline">\(x_{1}\)</span> + <span class="math inline">\(x_{2}\)</span> &gt; <span class="math inline">\(2.\)</span></p><p>结合条件 <span class="math inline">\(x_{2} &gt; 2\,x_{1}\)</span>可知，满足条件的点 <span class="math inline">\(\bigl(x_{1},x_{2}\bigr)\)</span> 必在不等式组</p><p><span class="math display">\[\begin{cases}x_{1} + x_{2} &gt; 2,\\x_{2} &gt; 2\,x_{1},\end{cases}\]</span></p><p>表示的平面区域内，且 <span class="math inline">\(\tfrac{1}{e}\)</span>&lt;<span class="math inline">\(x_{1}&lt;1.\)</span></p><p>由 <span class="math inline">\(x_{1} + x_{2} = 2\)</span> 和 <span class="math inline">\(x_{2} = 2\,x_{1}\)</span> 相交点</p><p><span class="math display">\[P\Bigl(\tfrac{2}{3},\,\tfrac{4}{3}\Bigr).\]</span></p><p>满足条件的点 <span class="math inline">\(\bigl(x_{1},\,x_{2}\bigr)\)</span>到原点的距离<br><span class="math display">\[\sqrt{x_{1}^{2} + x_{2}^{2}}=\sqrt{\tfrac{4}{9} + \tfrac{16}{9}}=\sqrt{\tfrac{20}{9}}=\tfrac{2\,\sqrt{5}}{3}.\]</span></p><p>因为<br><span class="math display">\[\Bigl(\tfrac{2\,\sqrt{5}}{3}\Bigr)^{2}-\Bigl(\tfrac{4}{e}\Bigr)^{2}=\frac{20\,e^{2} - 144}{\,9\,e^{2}\,}&gt; 0,\]</span></p><p>得<br><span class="math display">\[\tfrac{2\,\sqrt{5}}{3} &gt; \tfrac{4}{e},\]</span></p><p>所以<br><span class="math display">\[\sqrt{x_{1}^{2} + x_{2}^{2}}&gt;\tfrac{4}{e}.\]</span></p><figure><img src="/2025/01/09/articles/daoshu/photo.jpg" alt="如图"><figcaption aria-hidden="true">如图</figcaption></figure>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="question">Question:</h2><p><img src="/2025/01/09/articles/daoshu/timu.jpg"></p><h2 id="preface">Preface：</h2><p>本文解法只是众多解法中的一种，但其出现在官方的标准解答中，反倒可以窥见其设计意图。</p><p>而本文解法以其罕见的思路入围我的导数TOP10。</p><p>当时老师介绍说是隔壁2班的同学考场复现了，现在回想起依然很佩服。</p><h2 id="answer-for-2">Answer for (2) :</h2><p>因为<br><span class="math display">\[f(x) = x^{2}\,\bigl(\frac{\ln x + 1}{x}\bigr) - a\quad (x&gt;0),\]</span> 设<br><span class="math display">\[g(x)=\frac{\ln x + 1}{x} - a\quad(x&gt;0),\]</span> 所以 <span class="math inline">\(f(x)\)</span> 的零点即为<span class="math inline">\(g(x)\)</span> 的零点。</p><p>因为<br><span class="math display">\[g&#39;(x) = -\,\frac{\ln x}{x^{2}}.\]</span></p><ul><li>当 <span class="math inline">\(x \in (0,1)\)</span> 时，<span class="math inline">\(g&#39;(x) &gt; 0\)</span>，<span class="math inline">\(g(x)\)</span> <strong>单调递增</strong>；<br></li><li>当 <span class="math inline">\(x \in (1,\infty)\)</span> 时，<span class="math inline">\(g&#39;(x) &lt; 0\)</span>，<span class="math inline">\(g(x)\)</span> <strong>单调递减</strong>。</li></ul><p>因为 <span class="math inline">\(g(x)\)</span> 有两个零点，则必有<span class="math inline">\(g(1)=1-a&gt;0\)</span>，且 <span class="math inline">\(x \to \infty\)</span> 时 <span class="math inline">\(g(x)\to -a&lt;0\)</span>，<br>得 <span class="math inline">\(0 &lt; a &lt; 1.\)</span></p><p>因为<br><span class="math display">\[g\!\bigl(\tfrac{1}{e}\bigr) = -\,a &lt; 0,\]</span><br>所以<br><span class="math display">\[\tfrac{1}{e} &lt; x_{1} &lt; 1 &lt; x_{2}.\]</span></p><p>依函数关系<br><span class="math display">\[g(x_{1}) - g\bigl(2 - x_{1}\bigr),\]</span> 定义<br><span class="math display">\[F(x) = g(x) - g\bigl(2 - x\bigr),\quad\Bigl(\tfrac{1}{e}&lt;x&lt;1\Bigr).\]</span> 则其导数为<br><span class="math display">\[F&#39;(x)=-\frac{\ln x}{x^{2}}-\Bigl[\frac{\ln(2 - x)}{(2 - x)^{2}}\Bigr]=\frac{-\ln x}{x^{2}}+\frac{-\ln(2 - x)}{(2 - x)^{2}}.\]</span></p><p>因为 <span class="math inline">\((2 - x)^{2} &gt; x^{2}\)</span> 且<span class="math inline">\(\ln(2 - x) &lt; \ln x\)</span>， 所以<span class="math inline">\(F&#39;(x)&gt;\frac{-\ln x}{x^{2}}+ \frac{-\ln(2 -x)}{x^{2}}.\)</span> 所以 <span class="math inline">\(F&#39;(x) &gt;0.\)</span> 所以 <span class="math inline">\(F(x)\)</span> 在 <span class="math inline">\(\bigl(\tfrac{1}{e},\,1\bigr)\)</span>上单调递增。<br>所以 <span class="math inline">\(F(x) &lt; F(1) = 0.\)</span></p><p>于是<br><span class="math display">\[g(x) - g(2 - x) &lt; 0,\]</span> 进而<br><span class="math display">\[g(x_{1}) &lt; g\bigl(2 - x_{1}\bigr),\quadg(x_{2}) &lt; g\bigl(2 - x_{2}\bigr).\]</span></p><p>因为 <span class="math inline">\(\tfrac{1}{e}\)</span>&lt;<span class="math inline">\(x_{1}&lt;1&lt;x_{2}\)</span>，则 <span class="math inline">\(2 - x_{1}\)</span> &gt; <span class="math inline">\(1\)</span>。</p><p>又因为 <span class="math inline">\(g(x)\)</span> 在 <span class="math inline">\((1,\infty)\)</span> 上单调递减，</p><p>所以 <span class="math inline">\(x_{2}\)</span> &gt; <span class="math inline">\(2 - x_{1}\)</span>，即 <span class="math inline">\(x_{1}\)</span> + <span class="math inline">\(x_{2}\)</span> &gt; <span class="math inline">\(2.\)</span></p><p>结合条件 <span class="math inline">\(x_{2} &gt; 2\,x_{1}\)</span>可知，满足条件的点 <span class="math inline">\(\bigl(x_{1},x_{2}\bigr)\)</span> 必在不等式组</p><p><span class="math display">\[\begin{cases}x_{1} + x_{2} &gt; 2,\\x_{2} &gt; 2\,x_{1},\end{cases}\]</span></p><p>表示的平面区域内，且 <span class="math inline">\(\tfrac{1}{e}\)</span>&lt;<span class="math inline">\(x_{1}&lt;1.\)</span></p><p>由 <span class="math inline">\(x_{1} + x_{2} = 2\)</span> 和 <span class="math inline">\(x_{2} = 2\,x_{1}\)</span> 相交点</p><p><span class="math display">\[P\Bigl(\tfrac{2}{3},\,\tfrac{4}{3}\Bigr).\]</span></p><p>满足条件的点 <span class="math inline">\(\bigl(x_{1},\,x_{2}\bigr)\)</span>到原点的距离<br><span class="math display">\[\sqrt{x_{1}^{2} + x_{2}^{2}}=\sqrt{\tfrac{4}{9} + \tfrac{16}{9}}=\sqrt{\tfrac{20}{9}}=\tfrac{2\,\sqrt{5}}{3}.\]</span></p><p>因为<br><span class="math display">\[\Bigl(\tfrac{2\,\sqrt{5}}{3}\Bigr)^{2}-\Bigl(\tfrac{4}{e}\Bigr)^{2}=\frac{20\,e^{2} - 144}{\,9\,e^{2}\,}&gt; 0,\]</span></p><p>得<br><span class="math display">\[\tfrac{2\,\sqrt{5}}{3} &gt; \tfrac{4}{e},\]</span></p><p>所以<br><span class="math display">\[\sqrt{x_{1}^{2} + x_{2}^{2}}&gt;\tfrac{4}{e}.\]</span></p><figure><img src="/2025/01/09/articles/daoshu/photo.jpg" alt="如图"><figcaption aria-hidden="true">如图</figcaption></figure>]]></content>
       
       
       <categories>
@@ -571,9 +571,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -771,31 +771,6 @@
     
     
     <entry>
-      <title>CUMCM2020-A</title>
-      <link href="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/"/>
-      <url>/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="基于一维热传导方程的回焊炉炉温模型">基于一维热传导方程的回焊炉炉温模型</h1><h2 id="题目类型与评价">题目类型与评价</h2><p>传热问题和多目标规划问题的范文。</p><p>求解过程基本可以复制粘贴到其他传热问题(比如2018A)</p><h2 id="摘要">摘要</h2><p>对于每一个问题，通过“将该问题转换为……”“实质上是……”来进行模型分类和化归。</p><p>关键词：一维热传导方程、遗传算法、多变量非线性规划、分层序列法</p><h2 id="问题重述">问题重述</h2><p>把原题的图的表都复制了一遍</p><h2 id="模型假设">模型假设</h2><p>可以抄知网论文的</p><h2 id="符号说明">符号说明</h2><h2 id="问题分析">问题分析</h2><h3 id="问题一分析">问题一分析</h3><ul><li>合理简化实际情况，列出热传导方程组，确定边界条件。</li><li>采用合理的方法解方程，并分段求出各个温区对应的热学参数，使得模型预测结果与附件所给结果之间的均方根误差最小。</li><li>代入问题一所给的各温区温度和过炉速度，计算炉温曲线。</li></ul><p>画图</p><h3 id="问题二分析">问题二分析</h3><h3 id="问题三分析">问题三分析</h3><p>画图</p><h3 id="问题四分析">问题四分析</h3><h2 id="模型建立">模型建立</h2><p>图示工件和环境的关系</p><h3 id="热传导方程的建立">热传导方程的建立</h3><h3 id="边界条件的确定与模型的建立">边界条件的确定与模型的建立</h3><h2 id="问题解答">问题解答</h2><h3 id="炉内环境温度的计算">炉内环境温度的计算</h3><p>此时炉内温度的分布具有线性形式。因此，我们认为小温区、炉前区域、炉后区域之间的间隙处温度分布是线性的，并认为炉外一切区域的温度都与室内相同。</p><p>可视化实验中的环境温度</p><h3 id="有限差分法解pde方程">有限差分法解PDE方程</h3><p>有限差分法解偏微分方程示意图</p><h3 id="模型热学参数的确定">模型热学参数的确定</h3><p>假设每个区域的k和h都相等，仅考虑a的不同</p><p>模拟数据和实验数据的炉温曲线对比图</p><h3 id="问题一的求解">问题一的求解</h3><p>根据上文计算的……</p><p>经过检验，本题中求得的炉温曲线满足制程界限约束。并按照……写入文件中。</p><p>可视化</p><p><em>温度分布伪彩图</em></p><h3 id="题目二求解">题目二求解</h3><p>1）约束条件公式表达</p><p>2）约束条件说明</p><p>搜索过程可视化</p><p>从图中可以观察到……可近似认为它们是关于过炉速度的单调函数，不存在陷入局部最优非全局最优的情况。</p><h3 id="题目三求解">题目三求解</h3><h4 id="面积计算">面积计算</h4><p>解模函数</p><h4 id="遗传算法">遗传算法</h4><p>图解遗传算法</p><p>为尽可能减少遗传算法结果的不确定性，我们进行了多次独立重复求解。利用MATLAB的遗传算法工具箱编程并调整算法参数，将每次得到的潜在最优解记录在表3中：</p><p>描述面积小的充分条件；解释遗传算法求解结果</p><h3 id="题目四求解">题目四求解</h3><p>刻画曲线对称性偏差的函数</p><p>转化为双目标线性规划问题</p><h4 id="分层序列法">分层序列法</h4><p><strong>摘录</strong>：</p><p>如果目标函数fi具有比fj更高的优先性，那么我们可以采用简单分层序列法。该方法的局限性是，若某一步最优化解是唯一的，其后所有步骤的解也是唯一的，致使之后所有目标函数失去意义。因此，求解较上层优化问题时，需要给予优化结果一定的宽容度。引进一系列充分小的正数lambda1、lambda2……</p><h4 id="接力进化的遗传算法">接力进化的遗传算法</h4><p>可视化对称性比较</p><h2 id="模型总结">模型总结</h2><h3 id="灵敏度">灵敏度</h3><p>改变搜索步长</p><h3 id="优缺点">优缺点</h3><p>多目标规划和传热问题都可以套</p><p><img src="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/image.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数模のSymphony </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数模 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>堆排序</title>
       <link href="/2024/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/heapsort/"/>
       <url>/2024/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/heapsort/</url>
@@ -842,6 +817,31 @@
             <tag> 数据结构 </tag>
             
             <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CUMCM2020-A</title>
+      <link href="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/"/>
+      <url>/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="基于一维热传导方程的回焊炉炉温模型">基于一维热传导方程的回焊炉炉温模型</h1><h2 id="题目类型与评价">题目类型与评价</h2><p>传热问题和多目标规划问题的范文。</p><p>求解过程基本可以复制粘贴到其他传热问题(比如2018A)</p><h2 id="摘要">摘要</h2><p>对于每一个问题，通过“将该问题转换为……”“实质上是……”来进行模型分类和化归。</p><p>关键词：一维热传导方程、遗传算法、多变量非线性规划、分层序列法</p><h2 id="问题重述">问题重述</h2><p>把原题的图的表都复制了一遍</p><h2 id="模型假设">模型假设</h2><p>可以抄知网论文的</p><h2 id="符号说明">符号说明</h2><h2 id="问题分析">问题分析</h2><h3 id="问题一分析">问题一分析</h3><ul><li>合理简化实际情况，列出热传导方程组，确定边界条件。</li><li>采用合理的方法解方程，并分段求出各个温区对应的热学参数，使得模型预测结果与附件所给结果之间的均方根误差最小。</li><li>代入问题一所给的各温区温度和过炉速度，计算炉温曲线。</li></ul><p>画图</p><h3 id="问题二分析">问题二分析</h3><h3 id="问题三分析">问题三分析</h3><p>画图</p><h3 id="问题四分析">问题四分析</h3><h2 id="模型建立">模型建立</h2><p>图示工件和环境的关系</p><h3 id="热传导方程的建立">热传导方程的建立</h3><h3 id="边界条件的确定与模型的建立">边界条件的确定与模型的建立</h3><h2 id="问题解答">问题解答</h2><h3 id="炉内环境温度的计算">炉内环境温度的计算</h3><p>此时炉内温度的分布具有线性形式。因此，我们认为小温区、炉前区域、炉后区域之间的间隙处温度分布是线性的，并认为炉外一切区域的温度都与室内相同。</p><p>可视化实验中的环境温度</p><h3 id="有限差分法解pde方程">有限差分法解PDE方程</h3><p>有限差分法解偏微分方程示意图</p><h3 id="模型热学参数的确定">模型热学参数的确定</h3><p>假设每个区域的k和h都相等，仅考虑a的不同</p><p>模拟数据和实验数据的炉温曲线对比图</p><h3 id="问题一的求解">问题一的求解</h3><p>根据上文计算的……</p><p>经过检验，本题中求得的炉温曲线满足制程界限约束。并按照……写入文件中。</p><p>可视化</p><p><em>温度分布伪彩图</em></p><h3 id="题目二求解">题目二求解</h3><p>1）约束条件公式表达</p><p>2）约束条件说明</p><p>搜索过程可视化</p><p>从图中可以观察到……可近似认为它们是关于过炉速度的单调函数，不存在陷入局部最优非全局最优的情况。</p><h3 id="题目三求解">题目三求解</h3><h4 id="面积计算">面积计算</h4><p>解模函数</p><h4 id="遗传算法">遗传算法</h4><p>图解遗传算法</p><p>为尽可能减少遗传算法结果的不确定性，我们进行了多次独立重复求解。利用MATLAB的遗传算法工具箱编程并调整算法参数，将每次得到的潜在最优解记录在表3中：</p><p>描述面积小的充分条件；解释遗传算法求解结果</p><h3 id="题目四求解">题目四求解</h3><p>刻画曲线对称性偏差的函数</p><p>转化为双目标线性规划问题</p><h4 id="分层序列法">分层序列法</h4><p><strong>摘录</strong>：</p><p>如果目标函数fi具有比fj更高的优先性，那么我们可以采用简单分层序列法。该方法的局限性是，若某一步最优化解是唯一的，其后所有步骤的解也是唯一的，致使之后所有目标函数失去意义。因此，求解较上层优化问题时，需要给予优化结果一定的宽容度。引进一系列充分小的正数lambda1、lambda2……</p><h4 id="接力进化的遗传算法">接力进化的遗传算法</h4><p>可视化对称性比较</p><h2 id="模型总结">模型总结</h2><h3 id="灵敏度">灵敏度</h3><p>改变搜索步长</p><h3 id="优缺点">优缺点</h3><p>多目标规划和传热问题都可以套</p><p><img src="/2024/08/24/%E6%95%B0%E6%A8%A1/2020A/image.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数模のSymphony </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数模 </tag>
             
         </tags>
       
@@ -1004,6 +1004,31 @@
     
     
     <entry>
+      <title>背景知识-太阳系</title>
+      <link href="/2024/08/15/tofel/2/"/>
+      <url>/2024/08/15/tofel/2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="内容">内容</h2><p>太阳系在约45亿年前形成。星际间的气体和尘埃碰撞形成了太阳系星云(solarnebula)————内中的材料撞击形成了太阳系。</p><p>太阳系位于银河系中的猎户座星团(Orion starcluster)。银河系里只有15%的恒星拥有行星系统。</p><p>八个行星可以分为两类：类地(Terrestrial)和类木(Jovian)</p><p>类地：包括水星，金星，地球和火星 - 由岩石类组成 - 表面是固体 -没有环状带 - 很少或没有卫星 - 相对较小最小、离太阳最近的是水星。金星是最热的。火星可能在37亿年前支持生命活动，当时他表面多水、大气潮湿</p><p>类木：分为气体巨星(木星和土星)和冰巨星(天王星和海王星)</p><p>四个类木行星都有很多个卫星，有环状带，没有固体表面。最大的类木行星式木星。土星是第二大，其环状带宽至地月距，厚度却只有一公里。冥王星侧边旋转。海王星最冷。</p><p>围绕在类地行星的是小行星带，充满太阳系形成的剩余物体，从尘埃到最大的物体(矮星谷神星)</p><p>围绕在类木行星的是柯伊伯带(Kuiper Belt)，是很多彗星的诞生地。</p><p>柯伊伯带外面是奥尔特云(Oortcloud),冰碎片组成的巨大球体。是太阳系的边界——太阳的重力和物理影响消失</p><h2 id="单词">单词</h2><p>Mercury Venus Mars Jupiter Saturn Uranus Neptune the Milky Waygalaxy银河系 Orion star cluster猎户座星团 Terrestrial planets类地行星Jovian planets类木行星 Pluto冥王星 kuiper belt柯伊伯带 remnant残余</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 托福 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣-55</title>
       <link href="/2024/08/15/shuati/leetcode_55/"/>
       <url>/2024/08/15/shuati/leetcode_55/</url>
@@ -1024,34 +1049,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>背景知识-太阳系</title>
-      <link href="/2024/08/15/tofel/2/"/>
-      <url>/2024/08/15/tofel/2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="内容">内容</h2><p>太阳系在约45亿年前形成。星际间的气体和尘埃碰撞形成了太阳系星云(solarnebula)————内中的材料撞击形成了太阳系。</p><p>太阳系位于银河系中的猎户座星团(Orion starcluster)。银河系里只有15%的恒星拥有行星系统。</p><p>八个行星可以分为两类：类地(Terrestrial)和类木(Jovian)</p><p>类地：包括水星，金星，地球和火星 - 由岩石类组成 - 表面是固体 -没有环状带 - 很少或没有卫星 - 相对较小最小、离太阳最近的是水星。金星是最热的。火星可能在37亿年前支持生命活动，当时他表面多水、大气潮湿</p><p>类木：分为气体巨星(木星和土星)和冰巨星(天王星和海王星)</p><p>四个类木行星都有很多个卫星，有环状带，没有固体表面。最大的类木行星式木星。土星是第二大，其环状带宽至地月距，厚度却只有一公里。冥王星侧边旋转。海王星最冷。</p><p>围绕在类地行星的是小行星带，充满太阳系形成的剩余物体，从尘埃到最大的物体(矮星谷神星)</p><p>围绕在类木行星的是柯伊伯带(Kuiper Belt)，是很多彗星的诞生地。</p><p>柯伊伯带外面是奥尔特云(Oortcloud),冰碎片组成的巨大球体。是太阳系的边界——太阳的重力和物理影响消失</p><h2 id="单词">单词</h2><p>Mercury Venus Mars Jupiter Saturn Uranus Neptune the Milky Waygalaxy银河系 Orion star cluster猎户座星团 Terrestrial planets类地行星Jovian planets类木行星 Pluto冥王星 kuiper belt柯伊伯带 remnant残余</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 托福 </tag>
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -1116,68 +1116,6 @@
     
     
     <entry>
-      <title>数值分析-追赶法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>对于爪形矩阵的LU分解</p><p><span class="math display">\[\begin{pmatrix}b_1 &amp; c_1 &amp; 0 &amp; \cdots &amp; 0 \\a_2 &amp; b_2 &amp; c_2 &amp; \cdots &amp; 0 \\0 &amp; a_3 &amp; b_3 &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; c_{n-1} \\0 &amp; 0 &amp; 0 &amp; a_n &amp; b_n \\\end{pmatrix}\begin{pmatrix}x_1 \\x_2 \\x_3 \\\vdots \\x_n \\\end{pmatrix}=\begin{pmatrix}d_1 \\d_2 \\d_3 \\\vdots \\d_n \\\end{pmatrix}\]</span></p><p><span class="math display">\[\textbf{前向消去:}\alpha_1 = \frac{c_1}{b_1}, \quad \beta_1 = \frac{d_1}{b_1}\]</span> <span class="math display">\[\alpha_i = \frac{c_i}{b_i - a_i \alpha_{i-1}}, \quad \beta_i = \frac{d_i- a_i \beta_{i-1}}{b_i - a_i \alpha_{i-1}}, \quad (i = 2, 3, \dots, n)\]</span> <span class="math display">\[\textbf{回代:}x_n = \beta_n, \quad x_i = \beta_i - \alpha_i x_{i+1}, \quad (i = n-1,n-2, \dots, 1)\]</span> 求解顺序为：<span class="math display">\[\alpha_{1}-&gt;\beta_{1}-&gt;\alpha_{2}-&gt;\beta_{2}-&gt;\alpha_{3}……\]</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 线性代数 </tag>
-            
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数值分析-牛顿法</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 修考のFantasia </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 线性代数 </tag>
-            
-            <tag> 数值分析 </tag>
-            
-            <tag> 大学院入試 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数值分析-龙格库塔法</title>
       <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/RK/"/>
       <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/RK/</url>
@@ -1209,11 +1147,11 @@
     
     
     <entry>
-      <title>数值分析-迭代</title>
-      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
-      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
+      <title>数值分析-追赶法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/chase/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>对于爪形矩阵的LU分解</p><p><span class="math display">\[\begin{pmatrix}b_1 &amp; c_1 &amp; 0 &amp; \cdots &amp; 0 \\a_2 &amp; b_2 &amp; c_2 &amp; \cdots &amp; 0 \\0 &amp; a_3 &amp; b_3 &amp; \cdots &amp; 0 \\\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; c_{n-1} \\0 &amp; 0 &amp; 0 &amp; a_n &amp; b_n \\\end{pmatrix}\begin{pmatrix}x_1 \\x_2 \\x_3 \\\vdots \\x_n \\\end{pmatrix}=\begin{pmatrix}d_1 \\d_2 \\d_3 \\\vdots \\d_n \\\end{pmatrix}\]</span></p><p><span class="math display">\[\textbf{前向消去:}\alpha_1 = \frac{c_1}{b_1}, \quad \beta_1 = \frac{d_1}{b_1}\]</span> <span class="math display">\[\alpha_i = \frac{c_i}{b_i - a_i \alpha_{i-1}}, \quad \beta_i = \frac{d_i- a_i \beta_{i-1}}{b_i - a_i \alpha_{i-1}}, \quad (i = 2, 3, \dots, n)\]</span> <span class="math display">\[\textbf{回代:}x_n = \beta_n, \quad x_i = \beta_i - \alpha_i x_{i+1}, \quad (i = n-1,n-2, \dots, 1)\]</span> 求解顺序为：<span class="math display">\[\alpha_{1}-&gt;\beta_{1}-&gt;\alpha_{2}-&gt;\beta_{2}-&gt;\alpha_{3}……\]</span></p>]]></content>
       
       
       <categories>
@@ -1276,6 +1214,68 @@
       <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/lsm/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="最小二乘拟合多项式">最小二乘拟合多项式</h1><p><span class="math display">\[\varphi_{0}=1,\varphi_{1}=x,\varphi_{2}=x^2,……\varphi_{n}=x^n\]</span> ## 例题 <span class="math display">\[x \quad -3\quad-2\quad-1\quad0\quad1\quad2\quad3\quad4\]</span> <span class="math display">\[f(x)\quad-3.2\quad-2.1\quad-1.2\quad0.1\quad0.9\quad2.1\quad3.3\quad4\]</span> 试用y=ax+b拟合</p><h2 id="题解">题解</h2><p><span class="math display">\[\begin{bmatrix}(\varphi_{0},\varphi_{0}) &amp; (\varphi_{0},\varphi_{1}) \\(\varphi_{1},\varphi_{0}) &amp; (\varphi_{1},\varphi_{1})\end{bmatrix}\begin{pmatrix}    a_{0}\\    a_{1}\end{pmatrix}=\begin{pmatrix}    (f,\varphi_{0})\\    (f,\varphi_{1})\end{pmatrix}\]</span> <span class="math display">\[\varphi_{0}=(1,1,1,1,1,1,1,1,1)&#39;\]</span> <span class="math display">\[\varphi_{1}=(-3,-2,-1,0,1,2,3,4)&#39;\]</span> <span class="math display">\[f=(-3.2,-2.1,-1.2,0.1,0.9,2.1,3.3,4)&#39;\]</span></p><p><span class="math display">\[a_{0}=a,a_{1}=b\]</span> 可得： <span class="math display">\[\begin{bmatrix}8 &amp; 4 \\4 &amp; 44\end{bmatrix}\begin{pmatrix}    a\\    b\end{pmatrix}=\begin{pmatrix}    3.9\\    46\end{pmatrix}\]</span> 解得</p><p>a=1.048810，b=-0.036905</p><p>二次拟合即3by3 * 3by1=3by1，其中<span class="math inline">\(\varphi_{2}\)</span>为每个x的平方组成的列向量</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-牛顿法</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/newton/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><span class="math display">\[x_{k+1}=x_{k}-f(x_{k})/f&#39;(x_{k})\]</span> eg.用牛顿迭代法来求解<span class="math inline">\(x=e^{-x}\)</span>在0.5附近的根</p><p>解： <span class="math inline">\(f(x)=x-e^{-x}\)</span> <span class="math inline">\(x_{0}=0.5\)</span> <span class="math inline">\(x_{1}=0.5-(0.5-e^{-0.5})/(1+e^{-0.5})=0.56631\)</span><span class="math inline">\(x_{2}=0.56631-(0.56631-e^{-0.56631})/(1+e^{-0.56631})\)</span>· · · <span class="math inline">\(x_{n}=……\)</span></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 修考のFantasia </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+            <tag> 数值分析 </tag>
+            
+            <tag> 大学院入試 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数值分析-迭代</title>
+      <link href="/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/"/>
+      <url>/2024/08/11/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/diedai/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>例题： <span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11&amp; -1 \\6&amp;3&amp;12\end{bmatrix}\begin{pmatrix}    x_{1}\\    x_{2}\\    x_{3}\end{pmatrix}=\begin{pmatrix}    20\\33\\36\end{pmatrix}\]</span></p><p>精确解：x*=(3,2,1)'</p>可以记作： [ A = ] 其中， [ A =<span class="math display">\[\begin{bmatrix}8 &amp; -3 &amp; 2 \\4 &amp; 11 &amp; -1 \\6 &amp; 3 &amp; 12\end{bmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}x_1 \\x_2 \\x_3\end{pmatrix}\]</span>, =<span class="math display">\[\begin{pmatrix}20 \\33 \\36\end{pmatrix}\]</span><p>]</p><h3 id="雅可比迭代法">雅可比迭代法</h3>首先将矩阵 <span class="math inline">\(A\)</span> 分解为对角矩阵 <span class="math inline">\(D\)</span>、下三角矩阵 <span class="math inline">\(L\)</span> 和上三角矩阵 <span class="math inline">\(U\)</span>： [ A = D + L + U ] 其中， [ D =<span class="math display">\[\begin{bmatrix}8 &amp; 0 &amp; 0 \\0 &amp; 11 &amp; 0 \\0 &amp; 0 &amp; 12\end{bmatrix}\]</span>, L =<span class="math display">\[\begin{bmatrix}0 &amp; 0 &amp; 0 \\4 &amp; 0 &amp; 0 \\6 &amp; 3 &amp; 0\end{bmatrix}\]</span>, U =<span class="math display">\[\begin{bmatrix}0 &amp; -3 &amp; 2 \\0 &amp; 0 &amp; -1 \\0 &amp; 0 &amp; 0\end{bmatrix}\]</span><p>]</p><p>雅可比迭代法的迭代公式为： [ ^{(k+1)} = D^{-1} ( - (L + U)^{(k)}) ]### 高斯-赛德尔迭代法</p><p>高斯-赛德尔迭代法的矩阵形式为： [ ^{(k+1)} = (D + L)^{-1} ( -U^{(k)}) ]</p>]]></content>
       
       
       <categories>
@@ -1507,9 +1507,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -1563,9 +1563,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -1594,9 +1594,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -1625,9 +1625,9 @@
             
             <tag> 编程 </tag>
             
-            <tag> Leetcode </tag>
-            
             <tag> 力扣 </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
